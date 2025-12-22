@@ -58,10 +58,11 @@ npm run dev
 
 Le site a été testé avec :
 
-- [ ] WAVE (Web Accessibility Evaluation Tool)
+- [ ] Des extension de naviguateurs :
+  - [ ] WCAG contrast cheker
+  - [ ] Web Developer Tools (désactivation JS)
 - [ ] axe DevTools
 - [ ] Lighthouse (Chrome DevTools)
-- [ ] NVDA / JAWS (lecteurs d'écran)
 - [ ] Navigation clavier uniquement
 - [ ] Validation HTML W3C
 - [ ] Validation CSS W3C
