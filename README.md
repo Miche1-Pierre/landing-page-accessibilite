@@ -28,7 +28,7 @@ Ce projet est une démonstration de bonnes pratiques en accessibilité web, réa
 
 ```bash
 # Cloner le repository
-git clone https://github.com/Miche1-Pierre/landing-page-accessibilite. git
+git clone https://github.com/Miche1-Pierre/landing-page-accessibilite.git
 
 # Naviguer dans le dossier
 cd landing-page-accessibilite
