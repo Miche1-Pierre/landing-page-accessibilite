@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine | Voitures de Sport d'Exception</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="antialiased bg-background text-foreground font-[Inter,system-ui,sans-serif]">
+
+    <!-- Lien d'évitement -->
+    <nav aria-label="Liens d'évitement" class="skip-links">
+        <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+        <a href="#features" class="skip-link">Aller aux caractéristiques</a>
+        <a href="#gallery" class="skip-link">Aller à la galerie</a>
+        <a href="#testimonials" class="skip-link">Aller aux témoignages</a>
+        <a href="#faq" class="skip-link">Aller aux questions fréquentes</a>
+    </nav>
+
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+        <div class="container mx-auto flex h-14 max-w-screen-2xl items-center px-4">
+            <!-- Navigation -->
+            <!-- Gauche -->
+            <nav aria-label="Navigation principale" class="flex items-center gap-6 text-sm font-medium">
+                <!-- Logo -->
+                <a href="/" class="mr-6 flex items-center space-x-2" aria-label="Alpine - Accueil">
+                    <img src="./assets/Alpine.svg" alt="Alpine logo" class="h-8 w-auto" />
+                </a>
+
+                <!-- Navigation PC -->
+                <div class="hidden md:flex md:gap-6">
+                    <a href="#hero" class="transition-colors hover:text-foreground/80 text-foreground/60">Accueil</a>
+
+                    <!-- Menu déroulant pour les Modèles -->
+                    <div class="relative group">
+                        <button id="models-dropdown-button"
+                            class="inline-flex items-center transition-colors hover:text-foreground/80 text-foreground/60 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-expanded="false" aria-haspopup="true" aria-controls="models-dropdown-menu"
+                            aria-label="Menu des modèles Alpine">
+                            Modèles
+                            <i class='bx bx-chevron-down ml-1 transition-transform group-hover:rotate-180'
+                                aria-hidden="true"></i>
+                        </button>
+                        <div id="models-dropdown-menu"
+                            class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200"
+                            role="menu" aria-label="Modèles Alpine">
+                            <div class="rounded-md border border-border bg-popover p-1 shadow-md">
+
+                                <!-- Sous-menu Thermique -->
+                                <div class="relative submenu-container">
+                                    <button
+                                        class="w-full flex items-center justify-between rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                                        role="menuitem" aria-haspopup="true" aria-expanded="false">
+                                        <span class="font-medium">Thermique</span>
+                                        <i class='bx bx-chevron-right' aria-hidden="true"></i>
+                                    </button>
+                                    <div
+                                        class="submenu absolute left-full top-0 ml-1 w-48 opacity-0 invisible transition-all duration-200">
+                                        <div class="rounded-md border border-border bg-popover p-1 shadow-md">
+                                            <a href="#a110"
+                                                class="flex items-center rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                                                role="menuitem" aria-label="A110 - Prix : 58 500 euros">
+                                                <span class="font-medium" aria-hidden="true">A110</span>
+                                                <span class="ml-auto text-xs text-muted-foreground"
+                                                    aria-hidden="true">58 500€</span>
+                                            </a>
+                                            <a href="#a110s"
+                                                class="flex items-center rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                                                role="menuitem" aria-label="A110 S - Prix : 68 500 euros">
+                                                <span class="font-medium" aria-hidden="true">A110 S</span>
+                                                <span class="ml-auto text-xs text-muted-foreground"
+                                                    aria-hidden="true">68 500€</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sous-menu Électrique -->
+                                <div class="relative submenu-container">
+                                    <button
+                                        class="w-full flex items-center justify-between rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                                        role="menuitem" aria-haspopup="true" aria-expanded="false">
+                                        <span class="font-medium">Électrique</span>
+                                        <i class='bx bx-chevron-right' aria-hidden="true"></i>
+                                    </button>
+                                    <div
+                                        class="submenu absolute left-full top-0 ml-1 w-48 opacity-0 invisible transition-all duration-200">
+                                        <div class="rounded-md border border-border bg-popover p-1 shadow-md">
+                                            <a href="#a290"
+                                                class="flex items-center rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                                                role="menuitem" aria-label="A290 (à venir)">
+                                                <span class="font-medium" aria-hidden="true">A290</span>
+                                                <span class="ml-auto text-xs text-muted-foreground"
+                                                    aria-hidden="true">Bientôt</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sous-menu Sport -->
+                                <div class="relative submenu-container">
+                                    <button
+                                        class="w-full flex items-center justify-between rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                                        role="menuitem" aria-haspopup="true" aria-expanded="false">
+                                        <span class="font-medium">Sport</span>
+                                        <i class='bx bx-chevron-right' aria-hidden="true"></i>
+                                    </button>
+                                    <div
+                                        class="submenu absolute left-full top-0 ml-1 w-48 opacity-0 invisible transition-all duration-200">
+                                        <div class="rounded-md border border-border bg-popover p-1 shadow-md">
+                                            <a href="#a110r"
+                                                class="flex items-center rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                                                role="menuitem" aria-label="A110 R - Prix : 115 000 euros">
+                                                <span class="font-medium" aria-hidden="true">A110 R</span>
+                                                <span class="ml-auto text-xs text-muted-foreground"
+                                                    aria-hidden="true">115 000€</span>
+                                            </a>
+                                            <a href="#a110gt"
+                                                class="flex items-center rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                                                role="menuitem" aria-label="A110 GT">
+                                                <span class="font-medium" aria-hidden="true">A110 GT</span>
+                                                <span class="ml-auto text-xs text-muted-foreground"
+                                                    aria-hidden="true">75 000€</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1 h-px bg-border border-0" />
+                                <a href="#configurator"
+                                    class="flex items-center rounded-sm px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                                    role="menuitem" aria-label="Accéder au configurateur Alpine">
+                                    <span>Configurateur</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#features"
+                        class="transition-colors hover:text-foreground/80 text-foreground/60">Caractéristiques</a>
+                    <a href="#gallery" class="transition-colors hover:text-foreground/80 text-foreground/60">Galerie</a>
+                    <a href="#testimonials"
+                        class="transition-colors hover:text-foreground/80 text-foreground/60">Témoignages</a>
+                    <a href="#faq" class="transition-colors hover:text-foreground/80 text-foreground/60">FAQ</a>
+
+                    <!-- Menu déroulant Accessibilité -->
+                    <div class="relative group">
+                        <button id="accessibility-dropdown-button"
+                            class="inline-flex items-center transition-colors hover:text-foreground/80 text-foreground/60 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-expanded="false" aria-haspopup="true" aria-controls="accessibility-dropdown-menu"
+                            aria-label="Menu des options d'accessibilité" type="button">
+                            <i class='bx bx-universal-access text-xl mr-1' aria-hidden="true"></i>
+                            Accessibilité
+                            <i class='bx bx-chevron-down ml-1 transition-transform group-hover:rotate-180'
+                                aria-hidden="true"></i>
+                        </button>
+                        <div id="accessibility-dropdown-menu"
+                            class="absolute right-0 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200"
+                            role="menu" aria-label="Options d'accessibilité">
+                            <div class="rounded-md border border-border bg-popover p-4 shadow-md">
+                                <h3 class="mb-3 font-semibold text-sm">Paramètres d'accessibilité</h3>
+
+                                <!-- Taille de police -->
+                                <fieldset class="mb-4 border-0">
+                                    <legend id="font-size-label" class="block text-sm font-medium mb-2">Taille de
+                                        police</legend>
+                                    <div class="flex gap-2">
+                                        <button type="button" id="font-size-small"
+                                            class="flex-1 px-3 py-2 text-xs rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+                                            aria-label="Petite taille de police" data-font-size="small">
+                                            A
+                                        </button>
+                                        <button type="button" id="font-size-normal"
+                                            class="flex-1 px-3 py-2 text-sm rounded border border-border bg-accent hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+                                            aria-label="Taille de police normale (active)" aria-pressed="true"
+                                            data-font-size="normal">
+                                            A
+                                        </button>
+                                        <button type="button" id="font-size-large"
+                                            class="flex-1 px-3 py-2 text-base rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+                                            aria-label="Grande taille de police" data-font-size="large">
+                                            A
+                                        </button>
+                                        <button type="button" id="font-size-xlarge"
+                                            class="flex-1 px-3 py-2 text-lg rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+                                            aria-label="Très grande taille de police" data-font-size="xlarge">
+                                            A
+                                        </button>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Style de police -->
+                                <fieldset class="mb-4 border-0">
+                                    <legend id="font-style-label" class="block text-sm font-medium mb-2">Style de
+                                        police</legend>
+                                    <div class="flex flex-col gap-2">
+                                        <button type="button" id="font-style-normal"
+                                            class="px-3 py-2 text-sm rounded border border-border bg-accent hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring text-left"
+                                            aria-label="Police normale (active)" aria-pressed="true"
+                                            data-font-style="normal">
+                                            Police normale
+                                        </button>
+                                        <button type="button" id="font-style-dyslexic"
+                                            class="px-3 py-2 text-sm rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring text-left"
+                                            data-font-style="dyslexic">
+                                            Police Dyslexie (OpenDyslexic)
+                                        </button>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Espacement des lignes -->
+                                <fieldset class="mb-4 border-0">
+                                    <legend id="line-spacing-label" class="block text-sm font-medium mb-2">Espacement
+                                        des
+                                        lignes</legend>
+                                    <div class="flex gap-2">
+                                        <button type="button" id="line-spacing-normal"
+                                            class="flex-1 px-3 py-2 text-sm rounded border border-border bg-accent hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+                                            aria-label="Espacement normal (actif)" aria-pressed="true"
+                                            data-line-spacing="normal">
+                                            Normal
+                                        </button>
+                                        <button type="button" id="line-spacing-relaxed"
+                                            class="flex-1 px-3 py-2 text-sm rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+                                            aria-label="Espacement relaxé" data-line-spacing="relaxed">
+                                            Relaxé
+                                        </button>
+                                        <button type="button" id="line-spacing-loose"
+                                            class="flex-1 px-3 py-2 text-sm rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+                                            aria-label="Espacement large" data-line-spacing="loose">
+                                            Large
+                                        </button>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Contraste -->
+                                <fieldset class="mb-4 border-0">
+                                    <legend id="contrast-label" class="block text-sm font-medium mb-2">Contraste
+                                    </legend>
+                                    <div class="flex flex-col gap-2">
+                                        <button type="button" id="contrast-normal"
+                                            class="px-3 py-2 text-sm rounded border border-border bg-accent hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring text-left"
+                                            aria-label="Contraste normal (actif)" aria-pressed="true"
+                                            data-contrast="normal">
+                                            Normal
+                                        </button>
+                                        <button type="button" id="contrast-high"
+                                            class="px-3 py-2 text-sm rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring text-left"
+                                            aria-label="Contraste renforcé" aria-pressed="false" data-contrast="high">
+                                            Renforcé
+                                        </button>
+                                        <button type="button" id="contrast-inverted"
+                                            class="px-3 py-2 text-sm rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring text-left"
+                                            aria-label="Contraste inversé" aria-pressed="false"
+                                            data-contrast="inverted">
+                                            Inversé
+                                        </button>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Réinitialiser -->
+                                <button type="button" id="reset-accessibility"
+                                    class="w-full px-3 py-2 text-sm rounded bg-[#0055A4] text-white hover:bg-[#003d7a] focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                                    aria-label="Réinitialiser tous les paramètres d'accessibilité">
+                                    Réinitialiser
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Droite -->
+            <div class="flex flex-1 items-center justify-end space-x-2">
+                <button type="button"
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
+                    aria-label="Réserver un essai gratuit">
+                    Essai gratuit
+                </button>
+                <button type="button"
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#0055A4] text-white shadow hover:bg-[#003d7a] h-9 px-4 py-2"
+                    aria-label="Commander une Alpine">
+                    Commander
+                </button>
+
+                <!-- Boutton menu mobile -->
+                <button type="button" id="mobile-menu-btn"
+                    class="md:hidden inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 h-9 w-9 p-0"
+                    aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class='bx bx-menu text-xl' aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu sur mobile -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-border">
+        <nav aria-label="Navigation mobile" class="container flex flex-col gap-4 p-4">
+            <a href="#hero"
+                class="text-sm font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">Accueil</a>
+            <fieldset>
+                <legend class="text-sm font-medium mb-2">Modèles</legend>
+                <div class="ml-4 flex flex-col gap-2">
+                    <a href="#a110"
+                        class="text-sm text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
+                        aria-label="A110 - Modèle Alpine">A110</a>
+                    <a href="#a110s"
+                        class="text-sm text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
+                        aria-label="A110 S - Modèle Alpine">A110 S</a>
+                    <a href="#a110r"
+                        class="text-sm text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
+                        aria-label="A110 R - Modèle Alpine">A110 R</a>
+                    <a href="#configurator"
+                        class="text-sm text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
+                        aria-label="Configurateur Alpine">Configurateur</a>
+                </div>
+            </fieldset>
+            <a href="#features"
+                class="text-sm font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">Caractéristiques</a>
+            <a href="#gallery"
+                class="text-sm font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">Galerie</a>
+            <a href="#testimonials"
+                class="text-sm font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">Témoignages</a>
+            <a href="#faq"
+                class="text-sm font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">FAQ</a>
+        </nav>
+    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section id="hero" class="relative overflow-hidden bg-linear-to-b from-background to-muted/50 py-20 md:py-32"
+            aria-labelledby="hero-title">
+            <div class="container mx-auto relative px-4">
+                <div class="mx-auto max-w-5xl text-center">
+                    <h1 id="hero-title" class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+                        L'élégance sportive,
+                        <span class="text-gradient-alpine">Made in France</span>
+                    </h1>
+                    <p class="mt-6 text-lg text-muted-foreground sm:text-xl">
+                        Découvrez l'Alpine A110, une voiture de sport légère et agile qui incarne la passion française
+                        pour
+                        la performance et l'excellence.
+                    </p>
+                    <div class="mt-8 flex flex-wrap justify-center gap-4">
+                        <button type="button"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#0055A4] text-white shadow hover:bg-[#003d7a] h-11 px-8">
+                            Configurer ma A110
+                            <i class='bx bx-chevron-right' aria-hidden="true"></i>
+                        </button>
+                        <button type="button"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-11 px-8">
+                            Essayer maintenant
+                        </button>
+                    </div>
+                    <p class="mt-4 text-sm text-muted-foreground">
+                        <span aria-label="Drapeau français">FR</span> Fabriqué à Dieppe, France <i
+                            class='bxr  bx-forward-slash'></i> Livraison
+                        gratuite
+                    </p>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative mx-auto mt-16 max-w-5xl">
+                    <div class="aspect-video overflow-hidden rounded-lg border border-border bg-muted shadow-2xl">
+                        <img src="./assets/image1.webp"
+                            alt="Alpine A110 - Voiture de sport française bleue, vue de trois-quarts avant sur route"
+                            class="h-full w-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="border-b border-border bg-muted/50 py-12" aria-labelledby="stats-title">
+            <div class="container mx-auto px-4">
+                <h2 id="stats-title" class="sr-only">Statistiques Alpine par modèle. Sélectionnez un modèle Alpine pour
+                    découvrir ses performances et caractéristiques clés.</h2>
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="mb-12 text-lg text-muted-foreground">
+                        Sélectionnez un modèle Alpine pour découvrir ses performances et caractéristiques clés.
+                    </p>
+                </div>
+                <!-- Sélecteur de modèle -->
+                <fieldset class="mb-24 flex justify-center border-0">
+                    <legend class="sr-only">Sélecteur de modèle Alpine</legend>
+                    <div
+                        class="inline-flex flex-wrap justify-center gap-1 rounded-lg border border-border bg-card p-1 shadow-sm">
+                        <button type="button" data-model="a290"
+                            class="model-selector px-4 py-2 text-sm font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-[#0055A4] text-white"
+                            aria-pressed="true" aria-label="Afficher les statistiques du modèle A290">
+                            A290
+                        </button>
+                        <button type="button" data-model="a390"
+                            class="model-selector px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-pressed="false" aria-label="Afficher les statistiques du modèle A390">
+                            A390
+                        </button>
+                        <button type="button" data-model="a110"
+                            class="model-selector px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-pressed="false" aria-label="Afficher les statistiques du modèle A110">
+                            A110
+                        </button>
+                        <button type="button" data-model="a110s"
+                            class="model-selector px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-pressed="false" aria-label="Afficher les statistiques du modèle A110 S">
+                            A110 S
+                        </button>
+                        <button type="button" data-model="a110r"
+                            class="model-selector px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-pressed="false" aria-label="Afficher les statistiques du modèle A110 R">
+                            A110 R
+                        </button>
+                        <button type="button" data-model="a110gts"
+                            class="model-selector px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-pressed="false" aria-label="Afficher les statistiques du modèle A110 GTS">
+                            A110 GTS
+                        </button>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Stats dynamiques -->
+            <div aria-live="polite" aria-atomic="true">
+                <dl id="model-stats" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col items-center text-center">
+                        <dt class="text-4xl font-bold text-gradient-alpine" data-stat="year">2024</dt>
+                        <dd class="mt-2 text-sm text-muted-foreground">Année de sortie</dd>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <dt class="text-4xl font-bold text-gradient-alpine" data-stat="speed">285 km/h</dt>
+                        <dd class="mt-2 text-sm text-muted-foreground">Vitesse maximale</dd>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <dt class="text-4xl font-bold text-gradient-alpine" data-stat="acceleration">3.2s</dt>
+                        <dd class="mt-2 text-sm text-muted-foreground">0-100 km/h</dd>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <dt class="text-4xl font-bold text-gradient-alpine" data-stat="weight">1479 kg</dt>
+                        <dd class="mt-2 text-sm text-muted-foreground">Poids à vide</dd>
+                    </div>
+                </dl>
+            </div>
+            </div>
+        </section>
+
+        <!-- Section Features -->
+        <section id="features" class="py-20 md:py-32" aria-labelledby="features-heading">
+            <div class="container mx-auto px-4">
+                <div class="mx-auto max-w-232 text-center">
+                    <h2 id="features-heading"
+                        class="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:text-6xl">
+                        La légèreté est une force
+                    </h2>
+                    <p class="mt-4 text-lg text-muted-foreground">
+                        Chaque détail de l'Alpine A110 est pensé pour offrir une expérience de conduite incomparable.
+                    </p>
+                </div>
+
+                <div class="mx-auto mt-16 grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Carte Feature -->
+                    <article tabindex="0"
+                        class="feature-card group relative overflow-hidden rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        aria-label="Performance pure - Moteur 1.8L turbo de 292 chevaux">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#0055A4]/10">
+                            <i class='bx bx-tachometer text-2xl text-[#0055A4]' aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Performance pure</h3>
+                        <p class="mt-2 text-sm text-muted-foreground">
+                            Moteur 1.8L turbo de 292 ch pour une puissance exceptionnelle dans un châssis léger.
+                        </p>
+                    </article>
+
+                    <article tabindex="0"
+                        class="feature-card group relative overflow-hidden rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        aria-label="Châssis aluminium - Architecture légère pour un rapport poids puissance optimal">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#0055A4]/10">
+                            <i class='bx bx-cube text-2xl text-[#0055A4]' aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Châssis aluminium</h3>
+                        <p class="mt-2 text-sm text-muted-foreground">
+                            Architecture légère en aluminium pour un rapport poids/puissance optimal.
+                        </p>
+                    </article>
+
+                    <article tabindex="0"
+                        class="feature-card group relative overflow-hidden rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        aria-label="Sécurité active - Systèmes de sécurité avancés avec ESP, ABS et contrôle de traction">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#0055A4]/10">
+                            <i class='bx bx-shield-alt-2 text-2xl text-[#0055A4]' aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Sécurité active</h3>
+                        <p class="mt-2 text-sm text-muted-foreground">
+                            Systèmes de sécurité avancés avec ESP, ABS et contrôle de traction.
+                        </p>
+                    </article>
+
+                    <article tabindex="0"
+                        class="feature-card group relative overflow-hidden rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        aria-label="Agilité remarquable - Direction précise et suspension sport pour un plaisir de conduite maximal">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#0055A4]/10">
+                            <i class='bx bx-target-lock text-2xl text-[#0055A4]' aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Agilité remarquable</h3>
+                        <p class="mt-2 text-sm text-muted-foreground">
+                            Direction précise et suspension sport pour un plaisir de conduite maximal.
+                        </p>
+                    </article>
+
+                    <article tabindex="0"
+                        class="feature-card group relative overflow-hidden rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        aria-label="Design iconique - Lignes élégantes inspirées de l'A110 originale avec une touche moderne">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#0055A4]/10">
+                            <i class='bx bx-award text-2xl text-[#0055A4]' aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Design iconique</h3>
+                        <p class="mt-2 text-sm text-muted-foreground">
+                            Lignes élégantes inspirées de l'A110 originale avec une touche moderne.
+                        </p>
+                    </article>
+
+                    <article tabindex="0"
+                        class="feature-card group relative overflow-hidden rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        aria-label="Innovation - Technologies de pointe pour une expérience de conduite unique et mémorable">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#0055A4]/10">
+                            <i class='bx bx-bulb text-2xl text-[#0055A4]' aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-semibold">Innovation</h3>
+                        <p class="mt-2 text-sm text-muted-foreground">
+                            Technologies de pointe pour une expérience de conduite unique et mémorable.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Galerie -->
+        <section id="gallery" class="border-t border-b border-border bg-muted/50 py-20 md:py-32"
+            aria-labelledby="gallery-heading">
+            <div class="container mx-auto px-4">
+                <div class="mx-auto max-w-232 text-center">
+                    <h2 id="gallery-heading" class="text-3xl font-bold leading-tight tracking-tighter md:text-5xl">
+                        Galerie Alpine
+                    </h2>
+                    <p class="mt-4 text-lg text-muted-foreground">
+                        Découvrez l'Alpine A110 sous tous ses angles.
+                    </p>
+                </div>
+
+                <div class="mx-auto mt-16 grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4"
+                    aria-label="Galerie de photos Alpine A110">
+                    <figure class="text-center">
+                        <button type="button" tabindex="0"
+                            class="gallery-item group relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-label="Alpine A110 bleue, vue de face sur circuit" data-image="./assets/image1.webp"
+                            data-alt="Alpine A110 bleue, vue de face sur circuit"
+                            data-description="L'Alpine A110 dans sa livrée bleue emblématique, photographiée de face sur un circuit automobile. Cette vue frontale met en valeur son design aérodynamique, ses phares LED signature en forme de X et sa posture agressive qui incarne l'esprit sportif de la marque Alpine.">
+                            <img src="./assets/image1.webp" alt="Alpine A110 bleue, vue de face sur circuit"
+                                class="aspect-video w-full object-cover transition-transform group-hover:scale-105" />
+                        </button>
+                        <figcaption class="mt-2 text-sm text-muted-foreground">Alpine A110 bleue, vue de face sur
+                            circuit</figcaption>
+                    </figure>
+                    <figure class="text-center">
+                        <button type="button" tabindex="0"
+                            class="gallery-item group relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-label="Alpine A110 en action sur route de montagne" data-image="./assets/image2.webp"
+                            data-alt="Alpine A110 en action sur route de montagne"
+                            data-description="Capturée en pleine action sur une route de montagne sinueuse, l'Alpine A110 démontre son agilité et sa précision. Le cadre naturel souligne l'harmonie entre performance et plaisir de conduite, essence même de la philosophie Alpine.">
+                            <img src="./assets/image2.webp" alt="Alpine A110 en action sur route de montagne"
+                                class="aspect-video w-full object-cover transition-transform group-hover:scale-105" />
+                        </button>
+                        <figcaption class="mt-2 text-sm text-muted-foreground">Alpine A110 en action sur route de
+                            montagne</figcaption>
+                    </figure>
+                    <figure class="text-center">
+                        <button type="button" tabindex="0"
+                            class="gallery-item group relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-label="Détail de l'avant Alpine A110 avec phares signature"
+                            data-image="./assets/image3.webp"
+                            data-alt="Détail de l'avant Alpine A110 avec phares signature"
+                            data-description="Gros plan sur l'avant de l'Alpine A110 révélant les détails de sa conception raffinée. Les phares LED en forme de X, signature visuelle de la marque, créent une identité forte et reconnaissable. Le capot bombé et les prises d'air aérodynamiques témoignent de l'attention portée à chaque détail.">
+                            <img src="./assets/image3.webp" alt="Détail de l'avant Alpine A110 avec phares signature"
+                                class="aspect-video w-full object-cover transition-transform group-hover:scale-105" />
+                        </button>
+                        <figcaption class="mt-2 text-sm text-muted-foreground">Détail de l'avant Alpine A110 avec phares
+                            signature</figcaption>
+                    </figure>
+                    <figure class="text-center">
+                        <button type="button" tabindex="0"
+                            class="gallery-item group relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-label="Alpine A110 en virage serré sur circuit" data-image="./assets/image4.webp"
+                            data-alt="Alpine A110 en virage serré sur circuit"
+                            data-description="L'Alpine A110 négociant un virage serré sur circuit, démontrant son extraordinaire tenue de route et son châssis précis. La suspension sport et le centre de gravité bas permettent une agilité remarquable, offrant au pilote une connexion directe avec la route.">
+                            <img src="./assets/image4.webp" alt="Alpine A110 en virage serré sur circuit"
+                                class="aspect-video w-full object-cover transition-transform group-hover:scale-105" />
+                        </button>
+                        <figcaption class="mt-2 text-sm text-muted-foreground">Alpine A110 en virage serré sur circuit
+                        </figcaption>
+                    </figure>
+                    <figure class="text-center">
+                        <button type="button" tabindex="0"
+                            class="gallery-item group relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-label="Intérieur sportif Alpine A110 avec sièges baquets"
+                            data-image="./assets/image5.png"
+                            data-alt="Intérieur sportif Alpine A110 avec sièges baquets"
+                            data-description="Vue de l'habitacle sportif de l'Alpine A110 avec ses sièges baquets enveloppants, son volant en cuir et Alcantara, et son instrumentation moderne. L'intérieur allie minimalisme et raffinement, chaque élément étant conçu pour placer le conducteur au centre de l'expérience de conduite.">
+                            <img src="./assets/image5.png" alt="Intérieur sportif Alpine A110 avec sièges baquets"
+                                class="aspect-video w-full object-cover transition-transform group-hover:scale-105" />
+                        </button>
+                        <figcaption class="mt-2 text-sm text-muted-foreground">Intérieur sportif Alpine A110 avec sièges
+                            baquets</figcaption>
+                    </figure>
+                    <figure class="text-center">
+                        <button type="button" tabindex="0"
+                            class="gallery-item group relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-label="Alpine A110 vue de profil, design élégant" data-image="./assets/image6.png"
+                            data-alt="Alpine A110 vue de profil, design élégant"
+                            data-description="Profil élégant de l'Alpine A110 révélant ses proportions parfaites et ses lignes fluides inspirées de l'A110 originale des années 60. Le design compact et les courbes organiques créent une silhouette immédiatement reconnaissable qui célèbre l'héritage Alpine tout en regardant vers l'avenir.">
+                            <img src="./assets/image6.png" alt="Alpine A110 vue de profil, design élégant"
+                                class="aspect-video w-full object-cover transition-transform group-hover:scale-105" />
+                        </button>
+                        <figcaption class="mt-2 text-sm text-muted-foreground">Alpine A110 vue de profil, design élégant
+                        </figcaption>
+                    </figure>
+                    <figure class="text-center">
+                        <button type="button" tabindex="0"
+                            class="gallery-item group relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-label="Alpine A110 à l'arrêt, vue arrière trois-quarts"
+                            data-image="./assets/image7.png" data-alt="Alpine A110 à l'arrêt, vue arrière trois-quarts"
+                            data-description="Vue arrière trois-quarts de l'Alpine A110 à l'arrêt, mettant en évidence son design musclé et ses feux arrière caractéristiques. Les quatre sorties d'échappement centrales et le diffuseur aérodynamique témoignent de son tempérament sportif affirmé.">
+                            <img src="./assets/image7.png" alt="Alpine A110 à l'arrêt, vue arrière trois-quarts"
+                                class="aspect-video w-full object-cover transition-transform group-hover:scale-105" />
+                        </button>
+                        <figcaption class="mt-2 text-sm text-muted-foreground">Alpine A110 à l'arrêt, vue arrière
+                            trois-quarts</figcaption>
+                    </figure>
+                    <figure class="text-center">
+                        <button type="button" tabindex="0"
+                            class="gallery-item group relative overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            aria-label="Alpine A110 en mouvement sur route sinueuse" data-image="./assets/image8.png"
+                            data-alt="Alpine A110 en mouvement sur route sinueuse"
+                            data-description="L'Alpine A110 filant sur une route sinueuse, capturant l'essence même du plaisir de conduite à la française. Cette image illustre parfaitement la légèreté et l'agilité qui font la renommée de l'Alpine A110, une voiture conçue pour procurer des sensations pures sur routes ouvertes.">
+                            <img src="./assets/image8.png" alt="Alpine A110 en mouvement sur route sinueuse"
+                                class="aspect-video w-full object-cover transition-transform group-hover:scale-105" />
+                        </button>
+                        <figcaption class="mt-2 text-sm text-muted-foreground">Alpine A110 en mouvement sur route
+                            sinueuse</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Galerie -->
+        <div id="gallery-modal" class="hidden fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm" role="dialog"
+            aria-modal="true" aria-labelledby="modal-title">
+            <div class="fixed inset-0 flex items-center justify-center p-4">
+                <div class="relative max-w-6xl w-full bg-background rounded-lg shadow-2xl">
+                    <!-- Bouton fermer -->
+                    <button id="modal-close" type="button"
+                        class="absolute -top-12 right-0 md:right-0 md:-top-12 text-white hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-full p-2"
+                        aria-label="Fermer la galerie">
+                        <i class='bx bx-x text-4xl' aria-hidden="true"></i>
+                    </button>
+
+                    <!-- Contenu modal -->
+                    <div class="p-6">
+                        <div class="w-full h-[60vh] flex items-center justify-center bg-muted/30 rounded-lg mb-4">
+                            <img id="modal-image" src="" alt=""
+                                class="max-w-full max-h-full object-contain rounded-lg" />
+                        </div>
+                        <div class="text-center">
+                            <h3 id="modal-title" class="text-xl font-semibold mb-2"></h3>
+                            <p id="modal-description" class="text-muted-foreground"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table Section -->
+        <section id="comparison" class="py-20 bg-muted" aria-labelledby="comparison-heading">
+            <div class="container mx-auto px-4">
+                <div class="mx-auto max-w-6xl">
+                    <div class="text-center mb-12">
+                        <h2 id="comparison-heading"
+                            class="text-3xl font-bold leading-tight tracking-tighter md:text-4xl">
+                            Comparez nos modèles
+                        </h2>
+                        <p class="mt-4 text-lg text-muted-foreground">
+                            Trouvez l'Alpine A110 qui vous correspond.
+                        </p>
+                    </div>
+
+                    <!-- Conteneur responsive pour le tableau -->
+                    <div class="overflow-x-auto rounded-lg border border-border bg-card shadow-sm">
+                        <table class="w-full border-collapse" aria-label="Tableau comparatif des modèles Alpine A110"
+                            role="table">
+                            <caption class="sr-only">
+                                Comparaison détaillée des caractéristiques techniques et prix entre l'Alpine A110, A110
+                                S et A110 R
+                            </caption>
+
+                            <thead>
+                                <tr class="border-b border-border bg-muted/50">
+                                    <th scope="col" class="px-6 py-4 text-left text-sm font-semibold"
+                                        id="caracteristique">
+                                        Caractéristique
+                                    </th>
+                                    <th scope="col" class="px-6 py-4 text-center text-sm font-semibold" id="a110">
+                                        A110
+                                    </th>
+                                    <th scope="col" class="px-6 py-4 text-center text-sm font-semibold" id="a110s">
+                                        A110 S
+                                    </th>
+                                    <th scope="col" class="px-6 py-4 text-center text-sm font-semibold" id="a110r">
+                                        A110 R
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="border-b border-border hover:bg-accent/50 transition-colors">
+                                    <th scope="row" headers="caracteristique" class="px-6 py-4 text-left font-medium">
+                                        Puissance
+                                    </th>
+                                    <td headers="a110" class="px-6 py-4 text-center">
+                                        252 ch
+                                    </td>
+                                    <td headers="a110s" class="px-6 py-4 text-center">
+                                        292 ch
+                                    </td>
+                                    <td headers="a110r" class="px-6 py-4 text-center font-semibold text-primary">
+                                        300 ch
+                                    </td>
+                                </tr>
+
+                                <tr class="border-b border-border hover:bg-accent/50 transition-colors">
+                                    <th scope="row" headers="caracteristique" class="px-6 py-4 text-left font-medium">
+                                        0-100 km/h
+                                    </th>
+                                    <td headers="a110" class="px-6 py-4 text-center">
+                                        4,5 s
+                                    </td>
+                                    <td headers="a110s" class="px-6 py-4 text-center">
+                                        4,4 s
+                                    </td>
+                                    <td headers="a110r" class="px-6 py-4 text-center font-semibold text-primary">
+                                        3,9 s
+                                    </td>
+                                </tr>
+
+                                <tr class="border-b border-border hover:bg-accent/50 transition-colors">
+                                    <th scope="row" headers="caracteristique" class="px-6 py-4 text-left font-medium">
+                                        Vitesse max
+                                    </th>
+                                    <td headers="a110" class="px-6 py-4 text-center">
+                                        250 km/h
+                                    </td>
+                                    <td headers="a110s" class="px-6 py-4 text-center">
+                                        260 km/h
+                                    </td>
+                                    <td headers="a110r" class="px-6 py-4 text-center font-semibold text-primary">
+                                        285 km/h
+                                    </td>
+                                </tr>
+
+                                <tr class="border-b border-border hover:bg-accent/50 transition-colors">
+                                    <th scope="row" headers="caracteristique" class="px-6 py-4 text-left font-medium">
+                                        Poids
+                                    </th>
+                                    <td headers="a110" class="px-6 py-4 text-center">
+                                        1 103 kg
+                                    </td>
+                                    <td headers="a110s" class="px-6 py-4 text-center">
+                                        1 114 kg
+                                    </td>
+                                    <td headers="a110r" class="px-6 py-4 text-center font-semibold text-primary">
+                                        1 082 kg
+                                    </td>
+                                </tr>
+
+                                <tr class="border-b border-border hover:bg-accent/50 transition-colors">
+                                    <th scope="row" headers="caracteristique" class="px-6 py-4 text-left font-medium">
+                                        Couple
+                                    </th>
+                                    <td headers="a110" class="px-6 py-4 text-center">
+                                        320 Nm
+                                    </td>
+                                    <td headers="a110s" class="px-6 py-4 text-center">
+                                        320 Nm
+                                    </td>
+                                    <td headers="a110r" class="px-6 py-4 text-center font-semibold text-primary">
+                                        340 Nm
+                                    </td>
+                                </tr>
+
+                                <tr class="border-b border-border hover:bg-accent/50 transition-colors">
+                                    <th scope="row" headers="caracteristique" class="px-6 py-4 text-left font-medium">
+                                        Freins
+                                    </th>
+                                    <td headers="a110" class="px-6 py-4 text-center">
+                                        Brembo
+                                    </td>
+                                    <td headers="a110s" class="px-6 py-4 text-center">
+                                        Brembo
+                                    </td>
+                                    <td headers="a110r" class="px-6 py-4 text-center font-semibold text-primary">
+                                        Brembo carbone
+                                    </td>
+                                </tr>
+
+                                <tr class="hover:bg-accent/50 transition-colors">
+                                    <th scope="row" headers="caracteristique" class="px-6 py-4 text-left font-medium">
+                                        Prix
+                                    </th>
+                                    <td headers="a110" class="px-6 py-4 text-center font-bold text-lg">
+                                        58 500 €
+                                    </td>
+                                    <td headers="a110s" class="px-6 py-4 text-center font-bold text-lg">
+                                        68 500 €
+                                    </td>
+                                    <td headers="a110r" class="px-6 py-4 text-center font-bold text-lg text-primary">
+                                        115 000 €
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr class="border-t-2 border-border bg-muted/30">
+                                    <td colspan="4" class="px-6 py-4 text-center text-sm text-muted-foreground">
+                                        <p>Prix TTC conseillés au 22 décembre 2025. Données techniques sous réserve de
+                                            modifications.</p>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <!-- Légende pour lecteurs d'écran -->
+                    <div class="mt-6 text-sm text-muted-foreground" role="note"
+                        aria-label="Informations complémentaires">
+                        <p><strong>Note :</strong> Les valeurs mises en évidence en bleu indiquent les meilleures
+                            performances de la catégorie.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="border-border bg-background py-20 md:py-8 mb-24"
+            aria-labelledby="testimonials-heading">
+            <div class="container mx-auto px-4">
+                <div class="mx-auto max-w-232 text-center">
+                    <h2 id="testimonials-heading" class="text-3xl font-bold leading-tight tracking-tighter md:text-5xl">
+                        Témoignages
+                    </h2>
+                    <p class="mt-4 text-lg text-muted-foreground">
+                        Ce que nos clients disent de l'Alpine A110.
+                    </p>
+                </div>
+
+                <div class="mx-auto mt-16 grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <article
+                        class="rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-lg focus-within:ring-2 focus-within:ring-ring"
+                        tabindex="0" role="article" aria-label="Témoignage de Marc Dubois">
+                        <div class="mb-4 flex items-center gap-1" role="img" aria-label="Note 5 étoiles sur 5">
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                        </div>
+                        <blockquote>
+                            <p class="text-muted-foreground">
+                                "Une voiture exceptionnelle ! Le plaisir de conduite est incomparable, et le design
+                                est tout simplement magnifique. L'Alpine A110 est un vrai bijou français."
+                            </p>
+                        </blockquote>
+                        <footer class="mt-4 flex items-center gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#0055A4] text-white font-semibold"
+                                aria-hidden="true">
+                                MD
+                            </div>
+                            <div>
+                                <cite class="not-italic font-semibold">Marc Dubois</cite>
+                                <p class="text-sm text-muted-foreground">Propriétaire A110 S</p>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article
+                        class="rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-lg focus-within:ring-2 focus-within:ring-ring"
+                        tabindex="0" role="article" aria-label="Témoignage de Sophie Martin">
+                        <div class="mb-4 flex items-center gap-1" role="img" aria-label="Note 5 étoiles sur 5">
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                        </div>
+                        <blockquote>
+                            <p class="text-muted-foreground">
+                                "Après 6 mois au volant, je ne regrette rien. La légèreté et l'agilité de cette
+                                voiture sont incroyables. Chaque sortie est un plaisir renouvelé !"
+                            </p>
+                        </blockquote>
+                        <footer class="mt-4 flex items-center gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#0055A4] text-white font-semibold"
+                                aria-hidden="true">
+                                SM
+                            </div>
+                            <div>
+                                <cite class="not-italic font-semibold">Sophie Martin</cite>
+                                <p class="text-sm text-muted-foreground">Propriétaire A110 Pure</p>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article
+                        class="rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-lg focus-within:ring-2 focus-within:ring-ring"
+                        tabindex="0" role="article" aria-label="Témoignage de Thomas Leroy">
+                        <div class="mb-4 flex items-center gap-1" role="img" aria-label="Note 5 étoiles sur 5">
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                            <i class="bx bxs-star text-xl text-yellow-500" aria-hidden="true"></i>
+                        </div>
+                        <blockquote>
+                            <p class="text-muted-foreground">
+                                "L'Alpine A110 R est une bête de circuit ! Les performances sont impressionnantes et
+                                la tenue de route est parfaite. Un vrai régal pour les passionnés."
+                            </p>
+                        </blockquote>
+                        <footer class="mt-4 flex items-center gap-3">
+                            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#0055A4] text-white font-semibold"
+                                aria-hidden="true">
+                                TL
+                            </div>
+                            <div>
+                                <cite class="not-italic font-semibold">Thomas Leroy</cite>
+                                <p class="text-sm text-muted-foreground">Propriétaire A110 R</p>
+                            </div>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <div class="container mx-auto px-4 mb-18">
+            <div class="mx-auto max-w-232 text-center">
+                <h2 id="faq-heading" class="text-3xl font-bold leading-tight tracking-tighter md:text-5xl">
+                    Questions fréquentes
+                </h2>
+                <p class="mt-4 text-lg text-muted-foreground">
+                    Tout ce que vous devez savoir sur l'Alpine A110.
+                </p>
+            </div>
+
+            <div class="mx-auto mt-16 max-w-3xl space-y-4">
+                <details class="group rounded-lg border border-border bg-card">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between p-6 font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        aria-label="Question : Quelle est la garantie sur l'Alpine A110 ?">
+                        <span>Quelle est la garantie sur l'Alpine A110 ?</span>
+                        <i class="bx bx-chevron-down text-2xl transition-transform group-open:rotate-180"
+                            aria-hidden="true"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-muted-foreground">
+                        L'Alpine A110 bénéficie d'une garantie de 3 ans ou 100 000 km, avec possibilité d'extension
+                        jusqu'à 5 ans.
+                    </div>
+                </details>
+
+                <details class="group rounded-lg border border-border bg-card">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between p-6 font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        aria-label="Question : Puis-je personnaliser ma A110 ?">
+                        <span>Puis-je personnaliser ma A110 ?</span>
+                        <i class="bx bx-chevron-down text-2xl transition-transform group-open:rotate-180"
+                            aria-hidden="true"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-muted-foreground">
+                        Oui, notre configurateur en ligne vous permet de choisir parmi une large gamme de couleurs,
+                        jantes et options intérieures.
+                    </div>
+                </details>
+
+                <details class="group rounded-lg border border-border bg-card">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between p-6 font-medium focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                        aria-label="Question : Quel est le délai de livraison ?">
+                        <span>Quel est le délai de livraison ?</span>
+                        <i class="bx bx-chevron-down text-2xl transition-transform group-open:rotate-180"
+                            aria-hidden="true"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-muted-foreground">
+                        Le délai de livraison varie de 4 à 6 mois selon la configuration choisie et la
+                        disponibilité.
+                    </div>
+                </details>
+            </div>
+        </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="border-t border-border bg-muted py-20" aria-labelledby="cta-heading">
+            <div class="container mx-auto px-4">
+                <div class="mx-auto max-w-232 text-center">
+                    <h2 id="cta-heading" class="text-3xl font-bold leading-tight tracking-tighter md:text-5xl">
+                        Prêt à prendre le volant ?
+                    </h2>
+                    <p class="mt-4 text-lg text-muted-foreground">
+                        Réservez votre essai gratuit dès aujourd'hui et découvrez la magie Alpine.
+                    </p>
+                    <div class="mt-8 flex flex-wrap justify-center gap-4">
+                        <button type="button" aria-label="Réserver un essai gratuit de l'Alpine A110"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#0055A4] text-white shadow hover:bg-[#003d7a] h-11 px-8">
+                            Réserver un essai
+                        </button>
+                        <button type="button" aria-label="Nous contacter pour plus d'informations"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-11 px-8">
+                            Nous contacter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="py-20 bg-background" aria-labelledby="contact-heading">
+            <div class="container mx-auto px-4">
+                <div class="mx-auto max-w-2xl">
+                    <div class="text-center mb-12">
+                        <h2 id="contact-heading" class="text-3xl font-bold leading-tight tracking-tighter md:text-4xl">
+                            Contactez-nous
+                        </h2>
+                        <p class="mt-4 text-lg text-muted-foreground">
+                            Une question ? Notre équipe est là pour vous répondre.
+                        </p>
+                    </div>
+
+                    <form id="contact-form" class="space-y-6" novalidate aria-labelledby="contact-heading">
+                        <!-- Nom et Prénom -->
+                        <div class="grid gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="firstname" class="block text-sm font-medium mb-2">
+                                    Prénom <span class="text-destructive" aria-label="requis">*</span>
+                                </label>
+                                <input type="text" id="firstname" name="firstname" required
+                                    class="w-full px-3 py-2 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-colors"
+                                    aria-required="true" aria-invalid="false" aria-describedby="firstname-error" />
+                                <p id="firstname-error" class="mt-1 text-sm text-destructive hidden" role="alert">
+                                    Veuillez entrer votre prénom
+                                </p>
+                            </div>
+
+                            <div>
+                                <label for="lastname" class="block text-sm font-medium mb-2">
+                                    Nom <span class="text-destructive" aria-label="requis">*</span>
+                                </label>
+                                <input type="text" id="lastname" name="lastname" required
+                                    class="w-full px-3 py-2 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-colors"
+                                    aria-required="true" aria-invalid="false" aria-describedby="lastname-error" />
+                                <p id="lastname-error" class="mt-1 text-sm text-destructive hidden" role="alert">
+                                    Veuillez entrer votre nom
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">
+                                Email <span class="text-destructive" aria-label="requis">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required autocomplete="email"
+                                class="w-full px-3 py-2 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-colors"
+                                aria-required="true" aria-invalid="false" aria-describedby="email-error email-help" />
+                            <p id="email-help" class="mt-1 text-sm text-muted-foreground">
+                                Nous ne partagerons jamais votre email avec des tiers.
+                            </p>
+                            <p id="email-error" class="mt-1 text-sm text-destructive hidden" role="alert">
+                                Veuillez entrer une adresse email valide
+                            </p>
+                        </div>
+
+                        <!-- Téléphone -->
+                        <div>
+                            <label for="phone" class="block text-sm font-medium mb-2">
+                                Téléphone
+                            </label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+33 6 12 34 56 78"
+                                class="w-full px-3 py-2 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-colors"
+                                aria-describedby="phone-error" aria-invalid="false" />
+                            <p id="phone-error" class="mt-1 text-sm text-destructive hidden" role="alert">
+                                Veuillez entrer un numéro de téléphone valide
+                            </p>
+                        </div>
+
+                        <!-- Sujet -->
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">
+                                Sujet <span class="text-destructive" aria-label="requis">*</span>
+                            </label>
+                            <select id="subject" name="subject" required
+                                class="w-full px-3 py-2 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-colors"
+                                aria-required="true" aria-invalid="false" aria-describedby="subject-error">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="essai">Demande d'essai</option>
+                                <option value="achat">Achat d'un véhicule</option>
+                                <option value="sav">Service après-vente</option>
+                                <option value="info">Demande d'informations</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <p id="subject-error" class="mt-1 text-sm text-destructive hidden" role="alert">
+                                Veuillez sélectionner un sujet
+                            </p>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">
+                                Message <span class="text-destructive" aria-label="requis">*</span>
+                            </label>
+                            <textarea id="message" name="message" required rows="5"
+                                class="w-full px-3 py-2 rounded-md border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-colors resize-y"
+                                aria-required="true" aria-invalid="false"
+                                aria-describedby="message-error message-count"></textarea>
+                            <div class="mt-1 flex justify-between items-center">
+                                <p id="message-error" class="text-sm text-destructive hidden" role="alert">
+                                    Veuillez entrer votre message (minimum 10 caractères)
+                                </p>
+                                <p id="message-count" class="text-sm text-muted-foreground ml-auto" aria-live="polite">
+                                    0 caractères
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Consentement RGPD -->
+                        <fieldset class="border-0">
+                            <legend class="sr-only">Consentement de traitement des données</legend>
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="consent" name="consent" required
+                                    class="mt-1 h-4 w-4 rounded border-input text-primary focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                                    aria-required="true" aria-invalid="false" aria-describedby="consent-error" />
+                                <label for="consent" class="text-sm">
+                                    J'accepte que mes données soient utilisées pour traiter ma demande conformément à
+                                    la <a href="#"
+                                        class="text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">politique
+                                        de confidentialité</a>. <span class="text-destructive"
+                                        aria-label="requis">*</span>
+                                </label>
+                            </div>
+                            <p id="consent-error" class="mt-1 text-sm text-destructive hidden" role="alert">
+                                Vous devez accepter la politique de confidentialité
+                            </p>
+                        </fieldset>
+
+                        <!-- Message de succès -->
+                        <div id="form-success"
+                            class="hidden p-4 rounded-md bg-green-50 border border-green-200 text-green-800"
+                            role="status" aria-live="polite">
+                            <div class="flex items-center gap-2">
+                                <i class='bx bx-check-circle text-2xl' aria-hidden="true"></i>
+                                <p class="font-medium">Message envoyé avec succès !</p>
+                            </div>
+                            <p class="mt-1 text-sm">Nous vous répondrons dans les plus brefs délais.</p>
+                        </div>
+
+                        <!-- Boutons -->
+                        <div class="flex flex-wrap gap-4">
+                            <button type="submit"
+                                class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-[#0055A4] text-white shadow hover:bg-[#003d7a] disabled:opacity-50 disabled:pointer-events-none h-11 px-8"
+                                aria-label="Envoyer le formulaire de contact">
+                                <i class='bx bx-send' aria-hidden="true"></i>
+                                Envoyer
+                            </button>
+                            <button type="reset"
+                                class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-11 px-8"
+                                aria-label="Réinitialiser le formulaire">
+                                <i class='bx bx-refresh' aria-hidden="true"></i>
+                                Réinitialiser
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-border py-12" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2">
+                        <img src="./assets/Alpine.svg" alt="Logo Alpine" class="h-8 w-8" />
+                        <span class="font-bold">ALPINE</span>
+                    </div>
+                    <p class="mt-4 text-sm text-muted-foreground">
+                        La légèreté est une force. Made in France depuis 1955.
+                    </p>
+                    <!-- Réseaux sociaux -->
+                    <div class="mt-6 flex gap-4">
+                        <a href="#" aria-label="Suivez-nous sur Facebook"
+                            class="text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">
+                            <i class='bx bxl-facebook-circle text-2xl' aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Suivez-nous sur Instagram"
+                            class="text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">
+                            <i class='bx bxl-instagram text-2xl' aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Suivez-nous sur Twitter"
+                            class="text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">
+                            <i class='bx bxl-twitter text-2xl' aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Suivez-nous sur YouTube"
+                            class="text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded">
+                            <i class='bx bxl-youtube text-2xl' aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <nav aria-label="Navigation modèles">
+                    <h3 class="text-sm font-semibold">Modèles</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#a110"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">A110</a>
+                        </li>
+                        <li><a href="#a110s"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">A110
+                                S</a></li>
+                        <li><a href="#a110r"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">A110
+                                R</a></li>
+                        <li><a href="#configurator"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Configurateur</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Navigation plan du site">
+                    <h3 class="text-sm font-semibold">Plan du site</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#hero"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Accueil</a>
+                        </li>
+                        <li><a href="#features"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Caractéristiques</a>
+                        </li>
+                        <li><a href="#gallery"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Galerie</a>
+                        </li>
+                        <li><a href="#testimonials"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Témoignages</a>
+                        </li>
+                        <li><a href="#faq"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">FAQ</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Navigation entreprise">
+                    <h3 class="text-sm font-semibold">Entreprise</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">À
+                                propos</a></li>
+                        <li><a href="#"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Actualités</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Carrières</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Presse</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Navigation légale et accessibilité">
+                    <h3 class="text-sm font-semibold">Légal & Accessibilité</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Mentions
+                                légales</a></li>
+                        <li><a href="#"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Confidentialité</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">CGV</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">Cookies</a>
+                        </li>
+                        <li><a href="#"
+                                class="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">
+                                <i class='bx bx-universal-access' aria-hidden="true"></i>
+                                Accessibilité
+                            </a></li>
+                        <li><a href="#"
+                                class="text-muted-foreground hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">RGPD</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Séparateur et informations supplémentaires -->
+            <div class="mt-12 border-t border-border pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+                    <p>© 2025 Alpine de Pierrot. Tous droits réservés.</p>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <a href="#"
+                            class="hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">
+                            Plan du site
+                        </a>
+                        <span aria-hidden="true">/</span>
+                        <a href="#"
+                            class="hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">
+                            Gestion des cookies
+                        </a>
+                        <span aria-hidden="true">/</span>
+                        <a href="#"
+                            class="hover:text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:underline">
+                            Aide & Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/script.js"></script>
+</body>
+
+</html>
