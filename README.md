@@ -21,7 +21,7 @@ Ce projet est une démonstration de bonnes pratiques en accessibilité web, réa
 ## Technologies
 
 - HTML5 (sémantique)
-- CSS3 (vanilla, sans framework)
+- Style (tailwindcss v4.1)
 - JavaScript (amélioration progressive uniquement)
 
 ## Installation
@@ -33,8 +33,9 @@ git clone https://github.com/Miche1-Pierre/landing-page-accessibilite. git
 # Naviguer dans le dossier
 cd landing-page-accessibilite
 
-# Ouvrir index.html dans votre navigateur
-# Ou utiliser un serveur local (ex: Live Server, Python HTTP server, etc.)
+# Installer les dépendances (pour tailwindcss)
+npm install
+npm run dev
 ```
 
 ## Structure du projet
