@@ -161,15 +161,15 @@ html.font-dyslexic .font-\[Inter\,system-ui\,sans-serif\] {
 }
 
 /* Espacement des lignes */
-html.line-spacing-relaxed,
-html.line-spacing-relaxed body,
-html.line-spacing-relaxed body * {
+html.line-spacing-moyen,
+html.line-spacing-moyen body,
+html.line-spacing-moyen body * {
   line-height: 1.8;
 }
 
-html.line-spacing-loose,
-html.line-spacing-loose body,
-html.line-spacing-loose body * {
+html.line-spacing-large,
+html.line-spacing-large body,
+html.line-spacing-large body * {
   line-height: 2.2;
 }
 

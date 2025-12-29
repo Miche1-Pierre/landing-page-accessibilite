@@ -151,7 +151,7 @@ if (modelSelectors.length > 0) {
 const accessibilitySettings = {
   fontSize: 'normal',
   fontStyle: 'normal',
-  lineSpacing: 'normal',
+  lineSpacing: 'default',
   highContrast: false
 };
 
@@ -172,7 +172,7 @@ function applyAccessibilitySettings() {
 
   html.classList.remove('font-size-small', 'font-size-normal', 'font-size-large', 'font-size-xlarge');
   html.classList.remove('font-dyslexic');
-  html.classList.remove('line-spacing-relaxed', 'line-spacing-loose');
+  html.classList.remove('line-spacing-moyen', 'line-spacing-large');
   html.classList.remove('contrast-normal', 'contrast-high', 'contrast-inverted');
 
   html.classList.add(`font-size-${accessibilitySettings.fontSize}`);
@@ -181,7 +181,7 @@ function applyAccessibilitySettings() {
     html.classList.add('font-dyslexic');
   }
 
-  if (accessibilitySettings.lineSpacing !== 'normal') {
+  if (accessibilitySettings.lineSpacing !== 'default') {
     html.classList.add(`line-spacing-${accessibilitySettings.lineSpacing}`);
   }
 
