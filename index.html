@@ -20,8 +20,10 @@
         <a href="#main-content" class="skip-link">Aller au contenu principal</a>
         <a href="#features" class="skip-link">Aller aux caractéristiques</a>
         <a href="#gallery" class="skip-link">Aller à la galerie</a>
+        <a href="#comparison" class="skip-link">Aller à la comparaison des modèles</a>
         <a href="#testimonials" class="skip-link">Aller aux témoignages</a>
         <a href="#faq" class="skip-link">Aller aux questions fréquentes</a>
+        <a href="#contact" class="skip-link">Aller au formulaire de contact</a>
     </nav>
 
     <!-- Header -->
@@ -223,20 +225,20 @@
                                         des
                                         lignes</legend>
                                     <div class="flex gap-2">
-                                        <button type="button" id="line-spacing-normal"
+                                        <button type="button" id="line-spacing-default"
                                             class="flex-1 px-3 py-2 text-sm rounded border border-border bg-accent hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
-                                            aria-label="Espacement normal (actif)" aria-pressed="true"
-                                            data-line-spacing="normal">
-                                            Normal
+                                            aria-label="Espacement par default (actif)" aria-pressed="true"
+                                            data-line-spacing="default">
+                                            Default
                                         </button>
-                                        <button type="button" id="line-spacing-relaxed"
+                                        <button type="button" id="line-spacing-moyen"
                                             class="flex-1 px-3 py-2 text-sm rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
-                                            aria-label="Espacement relaxé" data-line-spacing="relaxed">
-                                            Relaxé
+                                            aria-label="Espacement moyen" data-line-spacing="moyen">
+                                            Moyen
                                         </button>
-                                        <button type="button" id="line-spacing-loose"
+                                        <button type="button" id="line-spacing-large"
                                             class="flex-1 px-3 py-2 text-sm rounded border border-border hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
-                                            aria-label="Espacement large" data-line-spacing="loose">
+                                            aria-label="Espacement large" data-line-spacing="large">
                                             Large
                                         </button>
                                     </div>
@@ -793,10 +795,7 @@
                                     <th scope="row" headers="caracteristique" class="px-6 py-4 text-left font-medium">
                                         Couple
                                     </th>
-                                    <td headers="a110" class="px-6 py-4 text-center">
-                                        320 Nm
-                                    </td>
-                                    <td headers="a110s" class="px-6 py-4 text-center">
+                                    <td headers="a110 a110s" colspan="2" class="px-6 py-4 text-center" aria-label="320 Nm pour A110 et A110 S">
                                         320 Nm
                                     </td>
                                     <td headers="a110r" class="px-6 py-4 text-center font-semibold text-primary">
@@ -808,10 +807,7 @@
                                     <th scope="row" headers="caracteristique" class="px-6 py-4 text-left font-medium">
                                         Freins
                                     </th>
-                                    <td headers="a110" class="px-6 py-4 text-center">
-                                        Brembo
-                                    </td>
-                                    <td headers="a110s" class="px-6 py-4 text-center">
+                                    <td headers="a110 a110s" colspan="2" class="px-6 py-4 text-center" aria-label="Freins Brembo pour A110 et A110 S">
                                         Brembo
                                     </td>
                                     <td headers="a110r" class="px-6 py-4 text-center font-semibold text-primary">
